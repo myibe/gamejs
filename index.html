@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  
+<div id="app">{{ message }}</div>
+
+<script>
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+
+        message: 'Hello Vue!',
+        godz: [
+            new Gods("Zeus", "Strike", "Lightning", 300),
+            new Gods("Poséidon", "Strike" , "Giant Wave", 250),
+            new Gods("Hadès", "Strike" ,"Sudden Death", 300) ,
+            new Gods("Athèna", "Strike", "Arrows Feast", 400),
+            new Gods("Aphrodite", "Strike", "Charming Spell", 250),
+
+                ],
+
+      }
+    }
+  }).mount('#app')
+
+
+</script>
+
+
+<!---------------- ENTETE --------------------->
+<!---------------- ENTETE --------------------->
+
+<div class="row">
+    <div class="row-span-2">
+        <h1 class="text-4xl text-center pt-5 font-semibold font-serif  lg:text-7xl lg:pl-12">Greek Yogurt</h1>
+    </div>
+      <div class="col-span-3">
+        <p class="text-xs font-serif text-center pb-5  lg:pl-20 lg:text-base lg:pt-5">Since the dawn of Earth</p>
+      </div>
+</div>
+
+<!---------------- CHARACTERS --------------------->
+<!---------------- CHARACTERS --------------------->
+ <div class="row">
+    <div class="row-span-2">
+        <h1 class="text-4xl text-center pt-5 font-semibold font-serif">Choose your character</h1>
+    </div>
+</div>
+
+
+<div class="grid grid-cols-2 lg:grid justify-items-center">
+  <div class="col pr-0.5 w-fit" id="x">
+    <!-- <img src="img/her.jpg" alt="..." class="pr-0.5 w-fit"> -->
+
+  </div>
+  <div class="col">
+    <img src="img/IMG_1419.jpg" alt="..." class="pl-0.5 w-fit">
+
+  </div>
+</div>
+
+<script>
+  // création d'une constante image
+  const img = document.createElement("img");
+    //rajoute l'image à cette constante
+    img.src = "img/IMG_1414.jpg"
+    img.src = "img/zeus.jpg"
+    img.src = "img/aphro.jpg"
+
+    // afficher les images
+    var block = document.getElementById("x");
+    block.appendChild(img);
+</script>
+
+
+
+
+<!---------------- HP  --------------------->
+<!---------------- HP ---------------------->
+
+
+<div class="grid grid-cols-2 gap-2 p-2 ">
+    <div class="col bg-green-400">
+        <p class="caption">HP</p>
+    </div>
+    <div class="col bg-green-400">
+
+        <p class="caption">HP</p>
+    </div>
+</div>
+
+
+<!---------------- BUTTONS --------------------->
+<!---------------- BUTTONS --------------------->
+ 
+<!-- <div id="button-zone">
+  <div id="attack-options">
+    <button v-for="attack in selected.monster.attacks" @click="attackMove($event)" :id="attack.name">{{ attack.name }}</button>
+  </div> -->
+
+
+
+
+<div class="row">
+    <div class="grid grid-cols-3 grid justify-items-center pt-10 ">
+        <button class="col bg-green-400 rounded-full border-2 border-green-500 h-16 w-16">
+            <p class="attack">Heal</p>
+        </button>
+        <button class="col bg-blue-400 rounded-full border-2 border-blue-500 h-16 w-16">
+            <p class="attack">Attack</p>
+        </button>
+        <button class="col bg-pink-400 rounded-full border-2 border-pink-500 h-16 w-16">
+            <p class="attack">Draw</p>
+        </button>
+    </div>
+</div>
+
+<!---------------- STATS --------------------->
+<!---------------- STATS --------------------->
+
+
+<div class="grid grid-cols-3 gap-2 m-4 grid justify-items-center ">
+    <div class="col">
+        <ul class="list-disc">
+            <li>stat 1</li>
+            <li>stat 2</li>
+            <li>stat 3</li>
+          </ul>
+    </div>
+
+    <div class="col"></div>
+
+    <div class="col">
+        <ul class="list-disc">
+            <li>stat 1</li>
+            <li>stat 2</li>
+            <li>stat 3</li>
+        </ul>
+    </div>
+
+</div>
+
+<!---------------- PLAY --------------------->
+<!---------------- PLAY --------------------->
+
+<div class="row">
+    <div class="grid grid-cols-1 grid justify-items-center pt-1 ">
+        <button class="col bg-amber-300  rounded-full h-8 w-32">PLAY</button>
+    </div>
+</div>
+
+
+<footer>
+    <script src="https://unpkg.com/vue@3%22%3E" ></script>
+
+</footer>
+</body>
+</html>
